@@ -21,7 +21,7 @@ public class App {
                 wordsMap.put(word, 1);
             }
         }
-        
+
         return wordsMap;
     }
 

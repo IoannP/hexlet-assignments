@@ -16,7 +16,7 @@ public class App {
         for (String word: words) {
             if (wordsMap.containsKey(word))  {
                 Integer wordCount = wordsMap.get(word);
-                wordsMap.put(word, wordCount + 1);
+                wordsMap.replace(word, wordCount + 1);
             } else {
                 wordsMap.put(word, 1);
             }

@@ -9,9 +9,11 @@ public class App {
             .stream(image)
             .map((row) -> Arrays
                 .stream(row)
-                .flatMap((pixel) -> Arrays.stream(new String[] { pixel, pixel }))
+                .flatMap((pixel) -> Arrays.stream(new String[] {pixel, pixel}))
+                .toArray(String[]::new)
             )
+            .flatMap((row) -> Arrays.stream(new String[][] {row, row}))
             .toArray(String[][]::new);
-  }
-} 
+    }
+}
 // END
